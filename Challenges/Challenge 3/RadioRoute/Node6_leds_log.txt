@@ -1,0 +1,23 @@
+DEBUG (6): Person code: 10581197
+
+DEBUG (6): Initial leds status:
+		 led0: 0 led1: 0 led2: 0
+
+DEBUG (6): Round 0, digit 1:
+		 led0: 0 led1: 1 led2: 0
+
+DEBUG (6): Round 1, digit 0:
+		 led0: 1 led1: 1 led2: 0
+
+DEBUG (6): Round 2, digit 5:
+		 led0: 1 led1: 1 led2: 1
+
+DEBUG (6): Round 3, digit 8:
+		 led0: 1 led1: 1 led2: 0
+
+DEBUG (6): Round 4, digit 1:
+		 led0: 1 led1: 0 led2: 0
+
+DEBUG (6): Round 5, digit 1:
+		 led0: 1 led1: 1 led2: 0
+

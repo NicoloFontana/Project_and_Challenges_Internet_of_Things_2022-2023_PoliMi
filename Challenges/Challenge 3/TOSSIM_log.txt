@@ -1,0 +1,127 @@
+DEBUG (1): Booting
+DEBUG (1): Application booted.
+DEBUG (1): Initial leds status: led0: 0 led1: 0 led2: 0
+DEBUG (7): Booting
+DEBUG (7): Application booted.
+DEBUG (7): Initial leds status: led0: 0 led1: 0 led2: 0
+DEBUG (3): Booting
+DEBUG (3): Application booted.
+DEBUG (3): Initial leds status: led0: 0 led1: 0 led2: 0
+DEBUG (6): Booting
+DEBUG (6): Application booted.
+DEBUG (6): Initial leds status: led0: 0 led1: 0 led2: 0
+DEBUG (2): Booting
+DEBUG (2): Application booted.
+DEBUG (2): Initial leds status: led0: 0 led1: 0 led2: 0
+DEBUG (5): Booting
+DEBUG (5): Application booted.
+DEBUG (5): Initial leds status: led0: 0 led1: 0 led2: 0
+DEBUG (4): Booting
+DEBUG (4): Application booted.
+DEBUG (4): Initial leds status: led0: 0 led1: 0 led2: 0
+DEBUG (7): Starting
+DEBUG (7): Radio on on node 7!
+DEBUG (6): Starting
+DEBUG (6): Radio on on node 6!
+DEBUG (1): Starting
+DEBUG (1): Radio on on node 1!
+DEBUG (1): Starting Timer1
+DEBUG (3): Starting
+DEBUG (3): Radio on on node 3!
+DEBUG (4): Starting
+DEBUG (4): Radio on on node 4!
+DEBUG (2): Starting
+DEBUG (2): Radio on on node 2!
+DEBUG (5): Starting
+DEBUG (5): Radio on on node 5!
+DEBUG (1): Fired Timer1
+DEBUG (1): Node 1 tries to send 5 to node 7
+DEBUG (1): Node 7 not found in rt
+DEBUG (1): ROUTE_REQ sent
+DEBUG (2): ROUTE_REQ received
+DEBUG (2): Node 7 not found in rt
+DEBUG (2): New leds status: led0: 0 led1: 1 led2: 0
+DEBUG (2): ROUTE_REQ sent
+DEBUG (4): ROUTE_REQ received
+DEBUG (4): Node 7 not found in rt
+DEBUG (4): New leds status: led0: 0 led1: 1 led2: 0
+DEBUG (1): New leds status: led0: 0 led1: 1 led2: 0
+DEBUG (4): ROUTE_REQ sent
+DEBUG (6): ROUTE_REQ received
+DEBUG (6): Node 7 not found in rt
+DEBUG (6): Updating led 1 at round 0 with digit 1
+DEBUG (6): New leds status: led0: 0 led1: 1 led2: 0
+DEBUG (3): ROUTE_REQ received
+DEBUG (3): Node 7 not found in rt
+DEBUG (3): New leds status: led0: 0 led1: 1 led2: 0
+DEBUG (2): New leds status: led0: 1 led1: 1 led2: 0
+DEBUG (3): ROUTE_REQ sent
+DEBUG (5): ROUTE_REQ received
+DEBUG (5): Node 7 not found in rt
+DEBUG (5): New leds status: led0: 0 led1: 1 led2: 0
+DEBUG (4): New leds status: led0: 1 led1: 1 led2: 0
+DEBUG (1): New leds status: led0: 1 led1: 1 led2: 0
+DEBUG (6): ROUTE_REQ sent
+DEBUG (7): ROUTE_REQ received
+DEBUG (7): NODE REQUESTED FOUND!
+DEBUG (7): New leds status: led0: 0 led1: 1 led2: 0
+DEBUG (5): New leds status: led0: 1 led1: 1 led2: 0
+DEBUG (4): New leds status: led0: 1 led1: 1 led2: 1
+DEBUG (5): ROUTE_REQ sent
+DEBUG (7): New leds status: led0: 1 led1: 1 led2: 0
+DEBUG (6): ROUTE_REQ received
+DEBUG (6): Node 7 not found in rt
+DEBUG (6): Updating led 0 at round 1 with digit 0
+DEBUG (6): New leds status: led0: 1 led1: 1 led2: 0
+DEBUG (3): New leds status: led0: 1 led1: 1 led2: 0
+DEBUG (7): ROUTE_REP sent
+DEBUG (6): ROUTE_REP received
+DEBUG (6): UPDATE RT: Next hop for node 7 is 7 with cost 1
+DEBUG (6): Updating led 2 at round 2 with digit 5
+DEBUG (6): New leds status: led0: 1 led1: 1 led2: 1
+DEBUG (5): ROUTE_REP received
+DEBUG (5): UPDATE RT: Next hop for node 7 is 7 with cost 1
+DEBUG (5): New leds status: led0: 1 led1: 1 led2: 1
+DEBUG (5): ROUTE_REP sent
+DEBUG (7): New leds status: led0: 1 led1: 1 led2: 1
+DEBUG (6): ROUTE_REP received
+DEBUG (6): Updating led 2 at round 3 with digit 8
+DEBUG (6): New leds status: led0: 1 led1: 1 led2: 0
+DEBUG (3): ROUTE_REP received
+DEBUG (3): UPDATE RT: Next hop for node 7 is 5 with cost 2
+DEBUG (3): New leds status: led0: 1 led1: 1 led2: 1
+DEBUG (6): ROUTE_REP sent
+DEBUG (7): New leds status: led0: 1 led1: 1 led2: 0
+DEBUG (4): ROUTE_REP received
+DEBUG (4): UPDATE RT: Next hop for node 7 is 6 with cost 2
+DEBUG (4): New leds status: led0: 1 led1: 1 led2: 0
+DEBUG (5): New leds status: led0: 1 led1: 1 led2: 0
+DEBUG (3): ROUTE_REP sent
+DEBUG (5): New leds status: led0: 1 led1: 0 led2: 0
+DEBUG (4): New leds status: led0: 1 led1: 0 led2: 0
+DEBUG (1): ROUTE_REP received
+DEBUG (1): UPDATE RT: Next hop for node 7 is 3 with cost 3
+DEBUG (1): Node 1 re-tries to send 5 to node 7
+DEBUG (1): New leds status: led0: 1 led1: 1 led2: 1
+DEBUG (1): DATA_MSG sent
+DEBUG (3): DATA_MSG received
+DEBUG (3): New leds status: led0: 1 led1: 1 led2: 0
+DEBUG (4): ROUTE_REP sent
+DEBUG (6): ROUTE_REP received
+DEBUG (6): Updating led 1 at round 4 with digit 1
+DEBUG (6): New leds status: led0: 1 led1: 0 led2: 0
+DEBUG (3): New leds status: led0: 1 led1: 0 led2: 0
+DEBUG (2): ROUTE_REP received
+DEBUG (2): UPDATE RT: Next hop for node 7 is 4 with cost 3
+DEBUG (2): New leds status: led0: 1 led1: 1 led2: 1
+DEBUG (3): DATA_MSG sent
+DEBUG (5): DATA_MSG received
+DEBUG (5): New leds status: led0: 1 led1: 1 led2: 0
+DEBUG (2): ROUTE_REP sent
+DEBUG (4): New leds status: led0: 1 led1: 1 led2: 0
+DEBUG (1): New leds status: led0: 1 led1: 1 led2: 0
+DEBUG (5): DATA_MSG sent
+DEBUG (7): DATA_MSG received
+DEBUG (7): DATA ARRIVED AT DESTINATION!
+DEBUG (7): Received data message from 1 with value 5
+DEBUG (7): New leds status: led0: 1 led1: 0 led2: 0

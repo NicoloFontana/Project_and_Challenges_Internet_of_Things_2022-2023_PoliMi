@@ -1,0 +1,315 @@
+[
+  {
+    "id": "159e9bb8.d69ebc",
+    "type": "tab",
+    "label": "Project flow",
+    "disabled": false,
+    "info": ""
+  },
+  {
+    "id": "7241d83c.aa793",
+    "type": "inject",
+    "z": "159e9bb8.d69ebc",
+    "name": "beacon clock",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "5",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "x": 190,
+    "y": 360,
+    "wires": [
+      [
+        "2b45898b.90938e"
+      ]
+    ]
+  },
+  {
+    "id": "8271dc9d.acccf",
+    "type": "debug",
+    "z": "159e9bb8.d69ebc",
+    "name": "debug beacon",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "x": 680,
+    "y": 440,
+    "wires": []
+  },
+  {
+    "id": "2b45898b.90938e",
+    "type": "function",
+    "z": "159e9bb8.d69ebc",
+    "name": "beacon sender",
+    "func": "if(flow.get(\"running\")!==undefined && flow.get(\"running\")){\n    clients = flow.get(\"clients\")\n    ts = flow.get(\"ts\")\n    bi = flow.get(\"bi\")\n    frame = ts\n    cfp = Math.max(ts, ts*clients.length)\n    cap = Math.max(ts, Math.min(bi-frame-cfp, ts*clients.length))\n    payload = {\n        type: 0,\n        src: flow.get(\"panc_id\"),\n        dst: flow.get(\"broad_id\"),\n        frame: frame,\n        cap: cap,\n        cfp: cfp,\n        bi: bi,\n        assignments: clients\n    }\n    return {payload: payload};\n}",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 430,
+    "y": 360,
+    "wires": [
+      [
+        "8271dc9d.acccf",
+        "b634aa67.10bda"
+      ]
+    ]
+  },
+  {
+    "id": "a153af7e.ff6de",
+    "type": "debug",
+    "z": "159e9bb8.d69ebc",
+    "name": "debug reset",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "x": 640,
+    "y": 60,
+    "wires": []
+  },
+  {
+    "id": "4e4a6c90.d44bc4",
+    "type": "function",
+    "z": "159e9bb8.d69ebc",
+    "name": "reset flow vars",
+    "func": "if(flow.get(\"running\")!==undefined){\n    if(!flow.get(\"running\")){\n        flow.set(\"clients\", [])\n        flow.set(\"next_id\", 0)\n        flow.set(\"actuators\", [])\n        flow.set(\"next_actuator\", 0)\n        flow.set(\"max_digits_id\", 2)\n        flow.set(\"net_ready\", 0)\n        flow.set(\"L\", 1024)\n        flow.set(\"panc_id\", \"PANC\")\n        flow.set(\"broad_id\", \"BROADCAST\")\n        flow.set(\"bi\", 5000)\n        flow.set(\"ts\", 100)\n    }\n    flow.set(\"running\", !flow.get(\"running\"))\n} else {\n    flow.set(\"clients\", [])\n    flow.set(\"next_id\", 0)\n    flow.set(\"actuators\", [])\n    flow.set(\"next_actuator\", 0)\n    flow.set(\"max_digits_id\", 2)\n    flow.set(\"net_ready\", 0)\n    flow.set(\"L\", 1024)\n    flow.set(\"panc_id\", \"PANC\")\n    flow.set(\"broad_id\", \"BROADCAST\")\n    flow.set(\"bi\", 5000)\n    flow.set(\"ts\", 100)\n    flow.set(\"running\", true)\n}\nreturn {payload: \"running: \" + flow.get(\"running\")}\n",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 420,
+    "y": 60,
+    "wires": [
+      [
+        "a153af7e.ff6de"
+      ]
+    ]
+  },
+  {
+    "id": "c0240dc1.059c4",
+    "type": "inject",
+    "z": "159e9bb8.d69ebc",
+    "name": "RESET",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "x": 200,
+    "y": 60,
+    "wires": [
+      [
+        "4e4a6c90.d44bc4"
+      ]
+    ]
+  },
+  {
+    "id": "8c0fb056.db41a8",
+    "type": "mqtt in",
+    "z": "159e9bb8.d69ebc",
+    "name": "",
+    "topic": "/10581197_10583298_speedtest",
+    "qos": "0",
+    "broker": "d3fa694e.2660b",
+    "x": 550,
+    "y": 260,
+    "wires": [
+      [
+        "1bc2dfd7.afeff"
+      ]
+    ]
+  },
+  {
+    "id": "158f008.6eadd",
+    "type": "mqtt out",
+    "z": "159e9bb8.d69ebc",
+    "name": "",
+    "topic": "/10581197_10583298_speedtest",
+    "qos": "0",
+    "retain": "",
+    "broker": "d3fa694e.2660b",
+    "x": 750,
+    "y": 200,
+    "wires": []
+  },
+  {
+    "id": "99f72f3f.65dd88",
+    "type": "debug",
+    "z": "159e9bb8.d69ebc",
+    "name": "debug start speedtest",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "x": 690,
+    "y": 140,
+    "wires": []
+  },
+  {
+    "id": "5d2c6c68.6f8f2c",
+    "type": "function",
+    "z": "159e9bb8.d69ebc",
+    "name": "send test rate msg",
+    "func": "if(flow.get(\"running\")!==undefined && flow.get(\"running\")){\n    const test_msg = \"x\".repeat(flow.get(\"L\"));\n    flow.set(\"startTime\", Date.now());\n    return {payload: test_msg};\n}",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 440,
+    "y": 200,
+    "wires": [
+      [
+        "99f72f3f.65dd88",
+        "158f008.6eadd"
+      ]
+    ]
+  },
+  {
+    "id": "831b2bb7.101fc8",
+    "type": "debug",
+    "z": "159e9bb8.d69ebc",
+    "name": "debug end speedtest",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "x": 1110,
+    "y": 300,
+    "wires": []
+  },
+  {
+    "id": "1bc2dfd7.afeff",
+    "type": "function",
+    "z": "159e9bb8.d69ebc",
+    "name": "compute time slot",
+    "func": "if(flow.get(\"running\")!==undefined && flow.get(\"running\")){\n    endTime = Date.now();\n    startTime = flow.get(\"startTime\");\n    interval = endTime-startTime //in millisec\n    Ts = interval*2\n    flow.set(\"ts\", Ts)\n    return {payload: Ts}\n}\n",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 860,
+    "y": 260,
+    "wires": [
+      [
+        "831b2bb7.101fc8"
+      ]
+    ]
+  },
+  {
+    "id": "b634aa67.10bda",
+    "type": "mqtt out",
+    "z": "159e9bb8.d69ebc",
+    "name": "",
+    "topic": "/10581197_10583298",
+    "qos": "0",
+    "retain": "",
+    "broker": "d3fa694e.2660b",
+    "x": 690,
+    "y": 360,
+    "wires": []
+  },
+  {
+    "id": "5f70feee.610398",
+    "type": "mqtt in",
+    "z": "159e9bb8.d69ebc",
+    "name": "",
+    "topic": "/10581197_10583298",
+    "qos": "0",
+    "broker": "d3fa694e.2660b",
+    "x": 190,
+    "y": 520,
+    "wires": [
+      [
+        "92b5c87.1a540b8",
+        "f71d5178.9d64f"
+      ]
+    ]
+  },
+  {
+    "id": "92b5c87.1a540b8",
+    "type": "function",
+    "z": "159e9bb8.d69ebc",
+    "name": "routing",
+    "func": "if(flow.get(\"running\")!==undefined && flow.get(\"running\")){\n    msg_in = JSON.parse(msg.payload);\n    if(msg_in.type==1){ //Association msg\n        clients = flow.get(\"clients\")\n        next_id = flow.get(\"next_id\")\n        max_n_clients = Math.pow(10,flow.get(\"max_digits_id\"))\n        if(next_id>=max_n_clients){\n            return {\n                payload: {\n                    type: -1,\n                    src: flow.get(\"panc_id\"),\n                    dst: msg_in.src,\n                    error: \"The network is full. Wait for the next session.\"\n                }\n            }\n        }\n        flow.set(\"next_id\", next_id+1)\n        id = \"c_\" + String(next_id).padStart(flow.get(\"max_digits_id\"), '0')\n        clients[clients.length] = id\n        flow.set(\"clients\", clients)\n        if(msg_in.client_type==1 || msg_in.client_type==2){ //actuator joined\n            next_actuator = flow.get(\"next_actuator\")\n            actuators = flow.get(\"actuators\")\n            actuators[next_actuator] = id\n            flow.set(\"actuators\", actuators)\n            flow.set(\"next_actuator\", next_actuator+1)\n        }\n        if(flow.get(\"clients\").length>=4 && flow.get(\"actuators\").length>=2){\n            flow.set(\"net_ready\", 1) //time 0\n        }\n        return {\n            payload: { //return msg with assigned id\n                type: 2,\n                src: flow.get(\"panc_id\"),\n                dst: msg_in.src,\n                id: id\n            }\n        }\n    }\n    if(flow.get(\"net_ready\") && msg_in.type==3 && !msg_in.forwarded){//forward msg to rnd actuator\n        actuators = flow.get(\"actuators\")\n        if(actuators.length>0){\n            actuator_idx = Math.floor(Math.random()*(actuators.length))\n            if(actuator_idx==actuators.length){\n                actuator_idx -= 1\n            }\n            dst = actuators[actuator_idx]\n            return {\n                payload: {\n                    type: 3,\n                    src: msg_in.src,\n                    dst: dst,\n                    data: msg_in.data/100,\n                    forwarded: 1\n                }\n            }\n        }\n    }\n}\n",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 420,
+    "y": 520,
+    "wires": [
+      [
+        "b6e101e6.785d78"
+      ]
+    ]
+  },
+  {
+    "id": "b6e101e6.785d78",
+    "type": "mqtt out",
+    "z": "159e9bb8.d69ebc",
+    "name": "",
+    "topic": "/10581197_10583298",
+    "qos": "0",
+    "retain": "",
+    "broker": "d3fa694e.2660b",
+    "x": 650,
+    "y": 520,
+    "wires": []
+  },
+  {
+    "id": "f71d5178.9d64f",
+    "type": "debug",
+    "z": "159e9bb8.d69ebc",
+    "name": "debug routing",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "x": 500,
+    "y": 620,
+    "wires": []
+  },
+  {
+    "id": "290507ac.281088",
+    "type": "inject",
+    "z": "159e9bb8.d69ebc",
+    "name": "speedtest clock",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "30",
+    "crontab": "",
+    "once": false,
+    "onceDelay": "1",
+    "x": 210,
+    "y": 200,
+    "wires": [
+      [
+        "5d2c6c68.6f8f2c"
+      ]
+    ]
+  },
+  {
+    "id": "d3fa694e.2660b",
+    "type": "mqtt-broker",
+    "z": "",
+    "name": "",
+    "broker": "broker.hivemq.com",
+    "port": "1883",
+    "clientid": "",
+    "usetls": false,
+    "compatmode": false,
+    "keepalive": "60",
+    "cleansession": true,
+    "birthTopic": "",
+    "birthQos": "0",
+    "birthPayload": "",
+    "closeTopic": "",
+    "closeQos": "0",
+    "closePayload": "",
+    "willTopic": "",
+    "willQos": "0",
+    "willPayload": ""
+  }
+]

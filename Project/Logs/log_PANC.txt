@@ -1,0 +1,186 @@
+03/08/2023 17:19:29node: debug reset
+msg.payload : string[13]
+"running: true"
+
+03/08/2023 17:19:31node: debug beaconmsg.payload : Object
+{ type: 0, src: "PANC", dst: "BROADCAST", frame: 76, cap: 76 … }
+
+03/08/2023 17:19:31node: debug routing/10581197_10583298 : msg.payload : string[97]
+"{"type":0,"src":"PANC","dst":"BROADCAST","frame":76,"cap":76,"cfp":76,"bi":5000,"assignments":[]}"
+
+03/08/2023 17:19:36node: debug beaconmsg.payload : Object
+{ type: 0, src: "PANC", dst: "BROADCAST", frame: 76, cap: 76 … }
+
+03/08/2023 17:19:36node: debug routing/10581197_10583298 : msg.payload : string[97]
+"{"type":0,"src":"PANC","dst":"BROADCAST","frame":76,"cap":76,"cfp":76,"bi":5000,"assignments":[]}"
+
+03/08/2023 17:19:41node: debug beaconmsg.payload : Object
+{ type: 0, src: "PANC", dst: "BROADCAST", frame: 76, cap: 76 … }
+
+03/08/2023 17:19:41node: debug routing/10581197_10583298 : msg.payload : string[97]
+"{"type":0,"src":"PANC","dst":"BROADCAST","frame":76,"cap":76,"cfp":76,"bi":5000,"assignments":[]}"
+
+03/08/2023 17:19:41node: debug routing/10581197_10583298 : msg.payload : string[58]
+"{"type":1,"src":"7nLQjpnLv9","dst":"PANC","client_type":0}"
+
+03/08/2023 17:19:41node: debug routing/10581197_10583298 : msg.payload : string[58]
+"{"type":1,"src":"ZIi7UaYsLt","dst":"PANC","client_type":1}"
+
+03/08/2023 17:19:41node: debug routing/10581197_10583298 : msg.payload : string[54]
+"{"type":2,"src":"PANC","dst":"7nLQjpnLv9","id":"c_00"}"
+
+03/08/2023 17:19:41node: debug routing/10581197_10583298 : msg.payload : string[54]
+"{"type":2,"src":"PANC","dst":"ZIi7UaYsLt","id":"c_01"}"
+
+03/08/2023 17:19:46node: debug beaconmsg.payload : Object
+{ type: 0, src: "PANC", dst: "BROADCAST", frame: 76, cap: 152 … }
+
+03/08/2023 17:19:46node: debug routing/10581197_10583298 : msg.payload : string[112]
+"{"type":0,"src":"PANC","dst":"BROADCAST","frame":76,"cap":152,"cfp":152,"bi":5000,"assignments":["c_00","c_01"]}"
+
+03/08/2023 17:19:46node: debug routing/10581197_10583298 : msg.payload : string[58]
+"{"type":1,"src":"Of0gcy3Vc4","dst":"PANC","client_type":0}"
+
+03/08/2023 17:19:46node: debug routing/10581197_10583298 : msg.payload : string[58]
+"{"type":1,"src":"ses2wZ4BcO","dst":"PANC","client_type":1}"
+
+03/08/2023 17:19:46node: debug routing/10581197_10583298 : msg.payload : string[54]
+"{"type":2,"src":"PANC","dst":"Of0gcy3Vc4","id":"c_02"}"
+
+03/08/2023 17:19:46node: debug routing/10581197_10583298 : msg.payload : string[54]
+"{"type":2,"src":"PANC","dst":"ses2wZ4BcO","id":"c_03"}"
+
+03/08/2023 17:19:46node: debug routing/10581197_10583298 : msg.payload : string[84]
+"{"type":3,"src":"c_00","dst":"PANC","client_type":0,"data":38.6034584,"forwarded":0}"
+
+03/08/2023 17:19:46node: debug routing/10581197_10583298 : msg.payload : string[69]
+"{"type":3,"src":"c_00","dst":"c_03","data":0.386034584,"forwarded":1}"
+
+03/08/2023 17:19:51node: debug beaconmsg.payload : Object
+{ type: 0, src: "PANC", dst: "BROADCAST", frame: 76, cap: 304 … }
+
+03/08/2023 17:19:51node: debug routing/10581197_10583298 : msg.payload : string[126]
+"{"type":0,"src":"PANC","dst":"BROADCAST","frame":76,"cap":304,"cfp":304,"bi":5000,"assignments":["c_00","c_01","c_02","c_03"]}"
+
+03/08/2023 17:19:51node: debug routing/10581197_10583298 : msg.payload : string[85]
+"{"type":3,"src":"c_02","dst":"PANC","client_type":0,"data":56.41543579,"forwarded":0}"
+
+03/08/2023 17:19:51node: debug routing/10581197_10583298 : msg.payload : string[70]
+"{"type":3,"src":"c_02","dst":"c_01","data":0.5641543579,"forwarded":1}"
+
+03/08/2023 17:19:51node: debug routing/10581197_10583298 : msg.payload : string[85]
+"{"type":3,"src":"c_00","dst":"PANC","client_type":0,"data":40.29957962,"forwarded":0}"
+
+03/08/2023 17:19:52node: debug routing/10581197_10583298 : msg.payload : string[77]
+"{"type":3,"src":"c_00","dst":"c_01","data":0.40299579620000003,"forwarded":1}"
+
+03/08/2023 17:19:56node: debug beaconmsg.payload : Object
+{ type: 0, src: "PANC", dst: "BROADCAST", frame: 76, cap: 304 … }
+
+03/08/2023 17:19:56node: debug routing/10581197_10583298 : msg.payload : string[126]
+"{"type":0,"src":"PANC","dst":"BROADCAST","frame":76,"cap":304,"cfp":304,"bi":5000,"assignments":["c_00","c_01","c_02","c_03"]}"
+
+03/08/2023 17:19:56node: debug routing/10581197_10583298 : msg.payload : string[85]
+"{"type":3,"src":"c_00","dst":"PANC","client_type":0,"data":26.90682983,"forwarded":0}"
+
+03/08/2023 17:19:56node: debug routing/10581197_10583298 : msg.payload : string[70]
+"{"type":3,"src":"c_00","dst":"c_03","data":0.2690682983,"forwarded":1}"
+
+03/08/2023 17:19:56node: debug routing/10581197_10583298 : msg.payload : string[85]
+"{"type":3,"src":"c_02","dst":"PANC","client_type":0,"data":25.59115219,"forwarded":0}"
+
+03/08/2023 17:19:57node: debug routing/10581197_10583298 : msg.payload : string[70]
+"{"type":3,"src":"c_02","dst":"c_03","data":0.2559115219,"forwarded":1}"
+
+03/08/2023 17:20:01node: debug beaconmsg.payload : Object
+{ type: 0, src: "PANC", dst: "BROADCAST", frame: 80, cap: 320 … }
+
+03/08/2023 17:20:01node: debug routing/10581197_10583298 : msg.payload : string[126]
+"{"type":0,"src":"PANC","dst":"BROADCAST","frame":80,"cap":320,"cfp":320,"bi":5000,"assignments":["c_00","c_01","c_02","c_03"]}"
+
+03/08/2023 17:20:01node: debug routing/10581197_10583298 : msg.payload : string[85]
+"{"type":3,"src":"c_00","dst":"PANC","client_type":0,"data":58.70441437,"forwarded":0}"
+
+03/08/2023 17:20:01node: debug routing/10581197_10583298 : msg.payload : string[70]
+"{"type":3,"src":"c_00","dst":"c_01","data":0.5870441437,"forwarded":1}"
+
+03/08/2023 17:20:01node: debug routing/10581197_10583298 : msg.payload : string[84]
+"{"type":3,"src":"c_02","dst":"PANC","client_type":0,"data":33.7995491,"forwarded":0}"
+
+03/08/2023 17:20:02node: debug routing/10581197_10583298 : msg.payload : string[69]
+"{"type":3,"src":"c_02","dst":"c_01","data":0.337995491,"forwarded":1}"
+
+03/08/2023 17:20:06node: debug beaconmsg.payload : Object
+{ type: 0, src: "PANC", dst: "BROADCAST", frame: 80, cap: 320 … }
+
+03/08/2023 17:20:06node: debug routing/10581197_10583298 : msg.payload : string[126]
+"{"type":0,"src":"PANC","dst":"BROADCAST","frame":80,"cap":320,"cfp":320,"bi":5000,"assignments":["c_00","c_01","c_02","c_03"]}"
+
+03/08/2023 17:20:06node: debug routing/10581197_10583298 : msg.payload : string[85]
+"{"type":3,"src":"c_02","dst":"PANC","client_type":0,"data":38.23954391,"forwarded":0}"
+
+03/08/2023 17:20:06node: debug routing/10581197_10583298 : msg.payload : string[85]
+"{"type":3,"src":"c_00","dst":"PANC","client_type":0,"data":18.88134575,"forwarded":0}"
+
+03/08/2023 17:20:06node: debug routing/10581197_10583298 : msg.payload : string[70]
+"{"type":3,"src":"c_02","dst":"c_01","data":0.3823954391,"forwarded":1}"
+
+03/08/2023 17:20:07node: debug routing/10581197_10583298 : msg.payload : string[70]
+"{"type":3,"src":"c_00","dst":"c_03","data":0.1888134575,"forwarded":1}"
+
+03/08/2023 17:20:11node: debug beaconmsg.payload : Object
+{ type: 0, src: "PANC", dst: "BROADCAST", frame: 80, cap: 320 … }
+
+03/08/2023 17:20:11node: debug routing/10581197_10583298 : msg.payload : string[126]
+"{"type":0,"src":"PANC","dst":"BROADCAST","frame":80,"cap":320,"cfp":320,"bi":5000,"assignments":["c_00","c_01","c_02","c_03"]}"
+
+03/08/2023 17:20:11node: debug routing/10581197_10583298 : msg.payload : string[84]
+"{"type":3,"src":"c_00","dst":"PANC","client_type":0,"data":25.8469696,"forwarded":0}"
+
+03/08/2023 17:20:11node: debug routing/10581197_10583298 : msg.payload : string[85]
+"{"type":3,"src":"c_02","dst":"PANC","client_type":0,"data":50.09960556,"forwarded":0}"
+
+03/08/2023 17:20:11node: debug routing/10581197_10583298 : msg.payload : string[69]
+"{"type":3,"src":"c_00","dst":"c_03","data":0.258469696,"forwarded":1}"
+
+03/08/2023 17:20:12node: debug routing/10581197_10583298 : msg.payload : string[70]
+"{"type":3,"src":"c_02","dst":"c_01","data":0.5009960556,"forwarded":1}"
+
+03/08/2023 17:20:16node: debug beaconmsg.payload : Object
+{ type: 0, src: "PANC", dst: "BROADCAST", frame: 80, cap: 320 … }
+
+03/08/2023 17:20:16node: debug routing/10581197_10583298 : msg.payload : string[126]
+"{"type":0,"src":"PANC","dst":"BROADCAST","frame":80,"cap":320,"cfp":320,"bi":5000,"assignments":["c_00","c_01","c_02","c_03"]}"
+
+03/08/2023 17:20:16node: debug routing/10581197_10583298 : msg.payload : string[85]
+"{"type":3,"src":"c_00","dst":"PANC","client_type":0,"data":29.81244469,"forwarded":0}"
+
+03/08/2023 17:20:16node: debug routing/10581197_10583298 : msg.payload : string[70]
+"{"type":3,"src":"c_00","dst":"c_03","data":0.2981244469,"forwarded":1}"
+
+03/08/2023 17:20:17node: debug routing/10581197_10583298 : msg.payload : string[85]
+"{"type":3,"src":"c_02","dst":"PANC","client_type":0,"data":50.04076004,"forwarded":0}"
+
+03/08/2023 17:20:17node: debug routing/10581197_10583298 : msg.payload : string[70]
+"{"type":3,"src":"c_02","dst":"c_01","data":0.5004076004,"forwarded":1}"
+
+03/08/2023 17:20:21node: debug beaconmsg.payload : Object
+{ type: 0, src: "PANC", dst: "BROADCAST", frame: 80, cap: 320 … }
+
+03/08/2023 17:20:21node: debug routing/10581197_10583298 : msg.payload : string[126]
+"{"type":0,"src":"PANC","dst":"BROADCAST","frame":80,"cap":320,"cfp":320,"bi":5000,"assignments":["c_00","c_01","c_02","c_03"]}"
+
+03/08/2023 17:20:21node: debug routing/10581197_10583298 : msg.payload : string[85]
+"{"type":3,"src":"c_02","dst":"PANC","client_type":0,"data":41.19527817,"forwarded":0}"
+
+03/08/2023 17:20:22node: debug routing/10581197_10583298 : msg.payload : string[70]
+"{"type":3,"src":"c_02","dst":"c_01","data":0.4119527817,"forwarded":1}"
+
+03/08/2023 17:20:26node: debug beaconmsg.payload : Object
+{ type: 0, src: "PANC", dst: "BROADCAST", frame: 80, cap: 320 … }
+
+03/08/2023 17:20:26node: debug routing/10581197_10583298 : msg.payload : string[126]
+"{"type":0,"src":"PANC","dst":"BROADCAST","frame":80,"cap":320,"cfp":320,"bi":5000,"assignments":["c_00","c_01","c_02","c_03"]}"
+
+03/08/2023 17:20:28node: debug resetmsg.payload : string[14]
+"running: false"
